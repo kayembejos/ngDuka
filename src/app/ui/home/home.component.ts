@@ -1,15 +1,57 @@
 import { Component } from '@angular/core';
+import { ProductListComponent } from '../products/product-list/product-list.component';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [ProductListComponent],
   template: `
-    <p>
-      home works!
-    </p>
-  `,
-  styles: ``
-})
-export default class HomeComponent {
+    <section align="center" class="hero-section">
+      <h2>Bienvenue sur ngDuka</h2>
+      <h3>Une boutique en ligne pour vos produits de qualité</h3>
+      <input placeholder="Rechercher dans ngDuka" type="text" />
+    </section>
 
-}
+    <br />
+    <app-product-list
+      sectionTitle="Electroniques"
+      query="electronics"
+      [queryLimitCount]="4"
+    />
+
+    <br />
+    <app-product-list
+      sectionTitle="Bijoux"
+      query="jewelery"
+      [queryLimitCount]="4"
+    />
+
+    <br />
+    <app-product-list
+      sectionTitle="Habits homme"
+      query="men's clothing"
+      [queryLimitCount]="4"
+    />
+
+    <br />
+    <app-product-list
+      sectionTitle="Habits femme"
+      query="women's clothing"
+      [queryLimitCount]="4"
+    />
+    <br />
+    <br />
+  `,
+  styles: `
+  .hero-section{
+    background: linear-gradient(to right,#FF7F7F, #FFB6C1);
+    padding: 2rem;
+
+    input{
+      width: 50vw;
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+  }
+  `,
+})
+export default class HomeComponent {}

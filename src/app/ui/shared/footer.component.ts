@@ -11,15 +11,25 @@ import { RouterLink } from '@angular/router';
           <div>
             <p><b>PRODUITS</b></p>
             <a routerLink="/products/electronics">Electronique</a>
-            <a routerLink="/products/jewerly">Bijoux</a>
+            <a routerLink="/products/jewelery">Bijoux</a>
             <a routerLink="/products/men's clothing">Habits homme</a>
             <a routerLink="/products/women's clothing">Habits femme</a>
           </div>
           <div>
             <p><b>LIENS</b></p>
-            <a href="" target="blank">Tutoriel Youtube</a>
-            <a href="" target="blank">Code GitHub</a>
-            <a href="" target="blank">Malakisi</a>
+            <a
+              href="https://www.youtube.com/watch?v=O3iz4pwrZPw&t=10s"
+              target="blank"
+              >Tutoriel Youtube</a
+            >
+            <a href="https://github.com/kayembejos/ngDuka" target="blank"
+              >Code GitHub</a
+            >
+            <a
+              href="https://drcmind-malakisi.teachable.com/courses/"
+              target="blank"
+              >Malakisi</a
+            >
           </div>
         </div>
         <p>
