@@ -12,6 +12,6 @@ export const routes: Routes = [
   },
   {
     path: 'product/:id',
-    loadComponent: () => import('./ui/products/products.component'),
+    loadComponent: () => import('./ui/product/product.component'),
   },
 ];

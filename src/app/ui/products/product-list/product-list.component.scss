@@ -24,7 +24,7 @@ header {
 
 .product-card {
   width: 250px;
-  border: 1px #ff7e22;
+  border: 1px solid grey;
   border-radius: 8px;
   transition: 250ms ease-in-out;
 
@@ -42,7 +42,7 @@ header {
   }
 
   .product-info {
-    border-top: 1px #ff7e22;
+    border-top: 1px solid grey;
     padding: 0.5rem;
 
     .truncate {

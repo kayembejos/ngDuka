@@ -1,7 +1,11 @@
 <main>
+  @if (loading()) {
+  <h2>Chargement des produits...</h2>
+  }@else{
   <header>
     <h3>{{ sectionTitle() }}</h3>
-    <a routerLink="/" class="actions">
+    @if (queryLimitCount() !== undefined) {
+    <a [routerLink]="'/products/' + query()" class="actions">
       <span>Voir plus</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -14,11 +18,12 @@
         />
       </svg>
     </a>
+    }
   </header>
 
   <div class="product-list-container">
     @for (product of products; track $index) {
-    <a class="product-card">
+    <a class="product-card" [routerLink]="'/product/' + product.id">
       <img [src]="product.image" />
       <div class="product-info">
         <p class="truncate">
@@ -36,4 +41,5 @@
     </P>
     }
   </div>
+  }
 </main>

@@ -15,4 +15,6 @@ export class ApiService {
       `${this.API}/products/category/${category}${queryParams}`
     );
   }
+
+  getProducts = () => this.http.get<Product[]>(`${this.API}/products`);
 }
